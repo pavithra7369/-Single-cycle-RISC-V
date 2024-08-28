@@ -1,4 +1,4 @@
-# -Single-cycle-RISC-V
+# Single-cycle-RISC-V
 single cycle RISCV 
 
 
