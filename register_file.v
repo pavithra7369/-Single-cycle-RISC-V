@@ -1,26 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 27.08.2024 13:03:22
-// Design Name: 
-// Module Name: register_file
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-
 module register_file(clk,read_reg1,read_reg2,write_reg,write_data,regwrite,alusrc,immediate,read_data1,read_data2);
 
 input clk,regwrite,alusrc;               // Clock signal for synchronous operation
