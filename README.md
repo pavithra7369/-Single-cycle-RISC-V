@@ -2,7 +2,8 @@
 single cycle RISCV 
 * Working on branch instruction 
 
-![Screenshot 2024-08-27 101534](https://github.com/user-attachments/assets/bb44c1be-27fc-4116-9ce8-2146b21ac0ca)
+![Screenshot 2024-08-27 101534](https://github.com/user-attachments/assets/95fdc484-bc4e-4fc7-8855-0a7ce4a83634)
+
 
 
 ##  Program Counter (PC)
