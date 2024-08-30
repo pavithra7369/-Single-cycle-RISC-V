@@ -70,4 +70,8 @@ This block decodes the instruction's funct3, funct7, and aluop fields to generat
 * MUX1: Selects between PC + 4 and branch target address
 * This multiplexer selects the next value of the PC based on whether a branch is taken.
 
+###  References
+Computer Organization and Design RISC-V Edition
+by David A. Patterson, John L. Hennessy
+
 
