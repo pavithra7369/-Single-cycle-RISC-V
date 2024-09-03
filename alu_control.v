@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 
-module alu_control(aluop,funct3,funct7,alu_ctrl);
-
- input [1:0] aluop;    // ALU operation signal from control unit
- input [2:0] funct3;    // funct3 field from the instruction
- input funct7;     // funct7 field from the instruction (R-type only)
- output reg [3:0] alu_ctrl; // ALU control signals
+module alu_control(
+    input [1:0] aluop,       // ALU operation signal from control unit
+    input [2:0] funct3,      // funct3 field from the instruction
+    input [6:0] funct7,      // 7-bit funct7 field from the instruction (R-type only)
+    output reg [3:0] alu_ctrl // ALU control signals
+);
 
     always @(*) begin
         case (aluop)
@@ -44,3 +44,4 @@ module alu_control(aluop,funct3,funct7,alu_ctrl);
     end
 
 endmodule
+
