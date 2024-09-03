@@ -11,6 +11,12 @@ module RISCV_TOP (
     wire zero, branch, memread, memwrite, memtoreg, alusrc, regwrite;
     wire [1:0] aluop;
     wire branch_decision;
+    wire [2:0] funct3; // 3-bit funct3
+    wire [6:0] funct7; // 7-bit funct7
+
+    // Extract funct3 and funct7 from the instruction
+    assign funct3 = instr[14:12]; // 3-bit funct3
+    assign funct7 = instr[31:25]; // 7-bit funct7
 
     // Instantiate the modules
     pc PC (
@@ -63,8 +69,8 @@ module RISCV_TOP (
 
     alu_control ALU_CTRL (
         .aluop(aluop),
-        .funct3(instr[14:12]),
-        .funct7(instr[30]),
+        .funct3(funct3),
+        .funct7(funct7),
         .alu_ctrl(alu_ctrl)
     );
 
@@ -122,10 +128,7 @@ module RISCV_TOP (
         .pc_next(pc_next)                // Input for PC
     );
 
-
- 
 endmodule
-
 
 
 
