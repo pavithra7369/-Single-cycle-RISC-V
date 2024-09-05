@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 
 module mux1(pc_plus_four,pc_plus_offset,branch_select, pc_next);
 input [31:0] pc_plus_four;
@@ -9,6 +8,5 @@ output reg [31:0] pc_next;
     always @(*) begin
         pc_next = branch_select ? pc_plus_offset : pc_plus_four;
     end
-
+initial begin  pc_next=32'd0; end
 endmodule
-
