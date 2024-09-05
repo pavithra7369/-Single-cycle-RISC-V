@@ -99,4 +99,3 @@ module control(dinput,branch,memread,memtoreg,aluop,memwrite,alusrc,regwrite);
 
 endmodule
 
-
