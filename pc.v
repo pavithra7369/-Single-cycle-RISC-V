@@ -1,3 +1,4 @@
+
 `timescale 1ns / 1ps
 //program counter is used to increment the pc by 4 , or increment the pc based on the branch offset
 module pc(clk,rst,din,dout);
@@ -12,7 +13,8 @@ dout<=32'h0;
 else
 dout<=din;
 end
-
+initial begin
+dout=32'd0;
+end
 endmodule
-
 
