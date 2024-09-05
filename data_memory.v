@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+
 module data_memory(clk,address,write_data,Memwrite,Memread,read_data );
 input[31:0]address; 
 input clk; //address is coming from alu
@@ -54,6 +54,5 @@ mems[address] <= write_data;
 end
 
 assign read_data = (Memread==1'b1) ? mems[address]: 32'd0; 
-
 
 endmodule
