@@ -3,7 +3,7 @@
 module alu_control(
     input [1:0] aluop,       // ALU operation signal from control unit
     input [2:0] funct3,      // funct3 field from the instruction
-    input [6:0] funct7,      // 7-bit funct7 field from the instruction (R-type only)
+    input funct7,            // 1-bit funct7 field from the instruction (R-type only)
     output reg [3:0] alu_ctrl // ALU control signals
 );
 
@@ -25,10 +25,10 @@ module alu_control(
             end
             2'b10: begin // R-type instructions
                 case ({funct7, funct3})
-                    10'b0000000_000: alu_ctrl = 4'b0010; // ADD
-                    10'b0000000_111: alu_ctrl = 4'b0000; // AND
-                    10'b0000000_110: alu_ctrl = 4'b0001; // OR
-                    10'b0100000_000: alu_ctrl = 4'b0110; // SUB
+                    4'b0_000: alu_ctrl = 4'b0010; // ADD
+                    4'b0_111: alu_ctrl = 4'b0000; // AND
+                    4'b0_110: alu_ctrl = 4'b0001; // OR
+                    4'b1_000: alu_ctrl = 4'b0110; // SUB
                     default: alu_ctrl = 4'b0000; // Default case
                 endcase
             end
@@ -44,4 +44,3 @@ module alu_control(
     end
 
 endmodule
-
