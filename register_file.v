@@ -1,9 +1,13 @@
-`timescale 1ns / 1ps
-module register_file(clk,read_reg1,read_reg2,write_reg,write_data,regwrite,alusrc,immediate,read_data1,read_data2);
 
-input clk,regwrite,alusrc;               // Clock signal for synchronous operation
+`timescale 1ns / 1ps
+module register_file(clk,read_reg1,read_reg2,write_reg,write_data,regwrite,read_data1,read_data2);
+
+input clk,regwrite;
+//alusrc;               // Clock signal for synchronous operation
 input [4:0] read_reg1, read_reg2,write_reg;
-input [31:0] write_data, immediate, read_data1,read_data2;
+input [31:0] write_data;
+output [31:0] read_data1,read_data2;
+// immediate;
 // Declare memory for register file
 reg [31:0] register[31:0];
 
