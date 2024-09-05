@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module mux3(h,i,j,k );
 input [31:0]h,i;
 //select signal is mem2reg 
