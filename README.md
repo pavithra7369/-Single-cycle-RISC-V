@@ -1,3 +1,5 @@
+### currently debugging
+
 # Single-cycle-RISC-V
 single cycle RISCV 
 * Working on branch instruction 
